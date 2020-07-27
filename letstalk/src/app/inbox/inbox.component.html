@@ -1,0 +1,32 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <!-- ======= Features Section ======= -->
+            <section id="features" class="features">
+                <div class="container">
+
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Inbox</h2>
+                        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p> -->
+                    </div>
+
+                    <div class="row" data-aos="fade-up" data-aos-delay="300" *ngFor="let user of users">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="icon-box">
+                                <i class="icofont-chat" style="color: pink;"></i>
+                                <h3><a [routerLink]="['/message',user._id ]">{{ user.name }}</a></h3>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Features Section -->
+        </div>
+    </section>
+</main>

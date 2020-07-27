@@ -1,0 +1,94 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <div class="row">
+
+
+                <div class="col-lg-5 col-md-12 login-block" data-aos="fade-up" data-aos-delay="300">
+                    <h2>Book Now</h2>
+                    <hr>
+                    <form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="php-email-form">
+                        <input type="hidden" name="therapist_id" id="therapist_id" formControlName="therapist_id" [(ngModel)]="registeredUser.therapist_id" />
+                        <div class="form-group">
+                            Name
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" [class.is-invalid]="registerForm.get('name').invalid && registerForm.get('name').touched" formControlName="name" [(ngModel)]="registeredUser.name" required/>
+                            <div *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched">
+                                <small *ngIf="registerForm.get('name').errors?.required" class="text-danger">Name is required</small>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            Date of Birth
+                            <input type="date" class="form-control" name="dob" id="dob" placeholder="Your Date of Birth" [class.is-invalid]="registerForm.get('dob').invalid && registerForm.get('dob').touched" formControlName="dob" [(ngModel)]="registeredUser.dob" required/>
+                            <div *ngIf="registerForm.get('dob').invalid && registerForm.get('dob').touched">
+                                <small *ngIf="registerForm.get('dob').errors?.required" class="text-danger">Date of Birth is required</small>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            Email
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" [class.is-invalid]="registerForm.get('email').invalid && registerForm.get('email').touched" formControlName="email" [(ngModel)]="registeredUser.email" required/>
+                            <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+                                <small *ngIf="registerForm.get('email').errors?.required" class="text-danger">Email is required</small>
+                                <small *ngIf="registerForm.get('email').errors?.pattern" class="text-danger">Invalid Email Format</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Contact Number
+                            <input type="text" class="form-control" name="contact_no" id="contact_no" placeholder="Your Contact Number" [class.is-invalid]="registerForm.get('contact_no').invalid && registerForm.get('contact_no').touched" formControlName="contact_no" [(ngModel)]="registeredUser.contact_no"
+                                required/>
+                            <div *ngIf="registerForm.get('contact_no').invalid && registerForm.get('contact_no').touched">
+                                <small *ngIf="registerForm.get('contact_no').errors?.required" class="text-danger">Contact Number is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Select Service
+
+
+                            <div class="cc-selector">
+                                <input id="visa" type="radio" formControlName="service" name="service" [(ngModel)]="registeredUser.service" value="Depression Counselling" />
+                                <label class="drinkcard-cc dep" for="visa">Depression Counselling</label>
+                                <input id="Relationship" type="radio" formControlName="service" name="service" [(ngModel)]="registeredUser.service" value="Relationship Counselling" />
+                                <label class="drinkcard-cc rel" for="Relationship">Relationship Counselling</label>
+                                <input id="Stress" type="radio" formControlName="service" name="service" [(ngModel)]="registeredUser.service" value="Stress Counselling" />
+                                <label class="drinkcard-cc stress" for="Stress">Stress Counselling</label>
+
+                                <input id="Anger" type="radio" formControlName="service" name="service" [(ngModel)]="registeredUser.service" value="Anger Management" />
+                                <label class="drinkcard-cc anger" for="Anger">Anger Management</label>
+                                <input id="Anxiety" type="radio" formControlName="service" name="service" [(ngModel)]="registeredUser.service" value="Anxiety Management" />
+                                <label class="drinkcard-cc anxiety" for="Anxiety">Anxiety Management</label>
+                                <input id="Other" type="radio" formControlName="service" name="service" [(ngModel)]="registeredUser.service" value="Other" />
+                                <label class="drinkcard-cc anxiety" for="Other">Other</label>
+                            </div>
+                            <div *ngIf="registerForm.get('contact_no').invalid && registerForm.get('contact_no').touched">
+                                <small *ngIf="registerForm.get('contact_no').errors?.required" class="text-danger">Contact Number is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Select Date
+                            <input type="date" class="form-control" name="cdate" id="cdate" [class.is-invalid]="registerForm.get('cdate').invalid && registerForm.get('cdate').touched" formControlName="cdate" [(ngModel)]="registeredUser.cdate" required/>
+                            <div *ngIf="registerForm.get('contact_no').invalid && registerForm.get('contact_no').touched">
+                                <small *ngIf="registerForm.get('cdate').errors?.required" class="text-danger">Contact Number is required</small>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="text-center"><button type="submit" [disabled]="registerForm.invalid">Submit</button></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>

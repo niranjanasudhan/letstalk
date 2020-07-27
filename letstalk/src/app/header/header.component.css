@@ -1,0 +1,11 @@
+.logo img {
+    width: 85%;
+    height: 85px !important;
+}
+
+.contact_us_link,
+.service_link,
+.about_link,
+.logout_link {
+    cursor: pointer;
+}

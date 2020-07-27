@@ -1,0 +1,36 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <div class="row">
+                <h4>Bookings</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Contact Number</th>
+                            <th>Date</th>
+                            <th>Service</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let book of bookingData">
+                            <td>{{ book.name }}</td>
+                            <td>{{ book.email }}</td>
+                            <td>{{ book.contact_no }}</td>
+                            <td>{{ book.cdate }}</td>
+                            <td>{{ book.service }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+            </div>
+        </div>
+    </section>
+</main>

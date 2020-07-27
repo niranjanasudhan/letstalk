@@ -1,0 +1,55 @@
+<main id="main">
+
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+
+            <div class="section-title">
+                <!-- <h2></h2> -->
+                <p></p>
+            </div>
+
+            <div class="row">
+
+
+
+                <div class="col-lg-9 col-md-9 mt-4 mt-md-0">
+                    <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
+                        <ul>
+                            <li>{{ users.name }}</li>
+                            <li>Gender : {{ users.gender }}</li>
+                            <li>Date of Birth : {{ users.dob }}</li>
+                            <li>Username : {{ users.username }}</li>
+                            <li>Email : {{ users.email }}</li>
+                        </ul>
+                        <!-- <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Buy Now</a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 mt-4 mt-lg-0">
+                    <div class="box" data-aos="zoom-in-left" data-aos-delay="200">
+
+                        <div class="btn-wrap">
+                            <a routerLink="/psychotherapist-profile-edit" class="btn-buy">Edit Profile</a>
+                        </div>
+                        <div class="btn-wrap">
+                            <a routerLink="/change_profilepic" class="btn-buy">Change Profile Picture</a>
+                        </div>
+                        <div class="btn-wrap">
+                            <a routerLink="/details" class="btn-buy">Add Details</a>
+                        </div>
+                        <!-- <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Change Password</a>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+</main>

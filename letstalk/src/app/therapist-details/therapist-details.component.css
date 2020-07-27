@@ -1,0 +1,20 @@
+.counts {
+    margin-top: 150px;
+}
+
+span {
+    font-size: 14px !important;
+}
+
+.img-fluid {
+    width: 200px;
+    height: 300px;
+}
+
+.main_button {
+    float: right;
+}
+
+.btn-dark {
+    margin: 10px !important;
+}

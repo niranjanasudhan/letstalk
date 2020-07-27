@@ -1,0 +1,128 @@
+<main id="main">
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+        <div class="container">
+            <h4>
+                {{basic_details?.name}}
+            </h4>
+            <div class="main_button">
+                <a [routerLink]="['/message/',this._id ]"><button class="btn btn-dark">Message</button></a>
+                <a [routerLink]="['/book/',this._id ]"> <button class="btn btn-dark">Book</button></a>
+
+            </div>
+            <div class="row">
+
+                <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+                    <img src="./assets/img/psy.jpg" alt="" class="img-fluid">
+                </div>
+
+                <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
+                    <div class="content d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-12 d-md-flex align-items-md-stretch">
+                                <div class="count-box">
+                                    <i class="icofont-briefcase"></i>
+                                    <span>{{details?.title}}</span>
+                                    <!-- <p>{{basic_details?.email}}</p> -->
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 d-md-flex align-items-md-stretch">
+
+
+                                <div class="count-box">
+                                    <i class="icofont-email"></i>
+                                    <span>{{basic_details?.email}}</span>
+                                    <!-- <p>{{basic_details?.email}}</p> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-md-flex align-items-md-stretch">
+
+
+                                <div class="count-box">
+                                    <i class="icofont-address-book"></i>
+                                    <span>{{details?.address}}</span>
+                                    <!-- <p>{{basic_details?.email}}</p> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-md-flex align-items-md-stretch">
+
+
+                                <div class="count-box">
+                                    <i class="icofont-mobile-phone"></i>
+                                    <span>{{details?.contact_no}}</span>
+                                    <!-- <p>{{basic_details?.email}}</p> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-md-flex align-items-md-stretch">
+
+
+                                <div class="count-box">
+                                    About me and my therapy practice
+                                    <hr>
+                                    <span>{{details?.about_me}}</span>
+                                    <!-- <p>{{basic_details?.email}}</p> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-md-flex align-items-md-stretch">
+
+
+                                <div class="count-box">
+                                    What I can help with
+                                    <hr>
+                                    <span>{{details?.help}}</span>
+                                    <!-- <p>{{basic_details?.email}}</p> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-md-flex align-items-md-stretch">
+
+
+                                <div class="count-box">
+                                    Types of therapy
+                                    <hr>
+                                    <span>{{details?.therapy}}</span>
+                                    <!-- <p>{{basic_details?.email}}</p> -->
+                                </div>
+                            </div>
+                            <h4>Social Media Links</h4>
+                            <section id="contact" class="contact">
+                                <div class="container">
+                                    <div>
+                                        <div class="contact-about">
+                                            <div class="social-links">
+                                                <a href="{{details?.twitter}}" target="_blank" class="twitter"><i class="icofont-twitter"></i></a>
+                                                <a href="{{details?.facebook}}" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
+                                                <a href="{{details?.instagram}}" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
+                                                <a href="{{details?.linkedin}}" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <!-- End .content-->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Counts Section -->
+
+
+
+
+
+
+
+
+
+
+
+</main>

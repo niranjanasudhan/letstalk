@@ -1,0 +1,55 @@
+<!-- ======= Hero Section ======= -->
+
+<!-- End Hero -->
+
+<main id="main">
+
+
+
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Let's Talk Blog</h2>
+                <!-- <p>Through effective counseling and therapy, our psychologists and therapists have helped hundreds of children, adults, couples, and families across Korea overcome their struggles and achieve their emotional, behavioral, and mental health
+                    goals. We teach techniques to help you reduce anxiety, depression, and solve relationship problems, as well as improve your wellbeing, happiness, and satisfaction in life. We also help you explore who you are and who you want to become.
+                    We have helped many others just like you:</p> -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 d-flex df1 nxt-rw  align-items-stretch mb-5 mb-lg-0" *ngFor="let post of posts">
+                    <div class="icon-box d-img" data-aos="fade-up" data-aos-delay="100">
+
+                        <h4 class="title">
+                            <a [routerLink]="['/blog_single',post._id ]">{{ post.title }}</a>
+                        </h4>
+                        <div class="desc">
+                            <p class="description">{{ post.desc }}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+
+
+
+
+
+</main>

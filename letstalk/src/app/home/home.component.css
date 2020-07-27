@@ -1,0 +1,101 @@
+#hero {
+    background-color: #d2e1b8;
+    margin-top: 120px;
+}
+
+.scrollto {
+    text-decoration: none !important;
+}
+
+.icon-box {
+    border: 2px solid pink !important;
+}
+
+.df1 {
+    height: 145px !important;
+}
+
+.nxt-rw {
+    margin-top: 40px !important;
+}
+
+.d-img {
+    background-image: url(../../assets/img/dippression.jpg);
+    background-size: contain;
+    width: 100%;
+}
+
+.d-img1 {
+    background-image: url(../../assets/img/stress.jpg);
+    background-size: contain;
+    width: 100%;
+}
+
+.d-img2 {
+    background-image: url(../../assets/img/anxiety.jpg);
+    background-size: contain;
+    width: 100%;
+}
+
+.d-img3 {
+    background-image: url(../../assets/img/work.jpeg);
+    background-size: contain;
+    width: 100%;
+}
+
+.d-img4 {
+    background-image: url(../../assets/img/addiction.png);
+    background-size: contain;
+    width: 100%;
+}
+
+.d-img5 {
+    background-image: url(../../assets/img/anger.jpg);
+    background-size: contain;
+    width: 100%;
+}
+
+.d-img6 {
+    background-image: url(../../assets/img/family.jpg);
+    background-size: contain;
+    width: 100%;
+}
+
+.d-img7 {
+    background-image: url(../../assets/img/self.png);
+    background-size: contain;
+    width: 100%;
+}
+
+.services .icon-box:hover::before {
+    background: #1e1b1c !important;
+    border: 2px solid #1e1b1c !important;
+}
+
+.more-services {
+    margin-top: 50px;
+}
+
+.img-card {
+    text-align: center !important;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.img-card h1 {
+    margin-top: -20px !important;
+}
+
+.count-box span {
+    font-size: 18px !important;
+}
+
+.signup {
+    margin-top: 20px;
+    width: 63% !important;
+}
+
+.start {
+    margin-top: 38px;
+    width: 100% !important;
+}

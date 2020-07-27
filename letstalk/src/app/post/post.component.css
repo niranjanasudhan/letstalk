@@ -1,0 +1,17 @@
+.login {
+    margin-top: 100px !important;
+    padding: 50px;
+}
+
+.img-login {
+    width: 90%;
+}
+
+.login-block {
+    margin-top: 100px;
+}
+
+.login-block button {
+    float: right !important;
+    width: 180px !important;
+}

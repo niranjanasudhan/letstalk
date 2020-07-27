@@ -1,0 +1,83 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <div class="row">
+
+
+                <div class="col-lg-5 col-md-12 login-block" data-aos="fade-up" data-aos-delay="300">
+                    <h2>Add More Informations</h2>
+                    <hr>
+                    <form [formGroup]="registerForm" (ngSubmit)="editUser()" class="php-email-form">
+                        <input type="hidden" formControlName="user_id" [(ngModel)]="userDetails.user_id" />
+                        <div class="form-group"> Address
+                            <input type="text" class="form-control" name="address" id="address" placeholder="Your address" [class.is-invalid]="registerForm.get('address').invalid && registerForm.get('address').touched" formControlName="address" [(ngModel)]="userDetails.address"
+                                required/>
+
+                        </div>
+                        <div class="form-group">
+                            Contact No
+                            <input type="text" class="form-control" name="contact_no" id="contact_no" [class.is-invalid]="registerForm.get('contact_no').invalid && registerForm.get('contact_no').touched" formControlName="contact_no" [(ngModel)]="userDetails.contact_no" required>
+
+
+
+                        </div>
+                        <div class="form-group">
+                            Designation/Title
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Provide Title/ Designation" [class.is-invalid]="registerForm.get('title').invalid && registerForm.get('title').touched" formControlName="title" [(ngModel)]="userDetails.title"
+                                required/>
+
+                        </div>
+                        <div class="form-group">
+                            About me and my therapy practice
+                            <textarea class="form-control" name="about_me" id="about_me" placeholder="" [class.is-invalid]="registerForm.get('about_me').invalid && registerForm.get('about_me').touched" formControlName="about_me" [(ngModel)]="userDetails.about_me">
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            What I can help with
+                            <textarea type="text" class="form-control" name="help" id="help" placeholder="" [class.is-invalid]="registerForm.get('help').invalid && registerForm.get('help').touched" formControlName="help" [(ngModel)]="userDetails.help">
+                                </textarea>
+                        </div>
+
+
+                        <div class="form-group">
+                            Types of therapy
+                            <textarea type="text" class="form-control" name="therapy" id="therapy" placeholder="" [class.is-invalid]="registerForm.get('therapy').invalid && registerForm.get('therapy').touched" formControlName="therapy" [(ngModel)]="userDetails.therapy">
+                            </textarea>
+                        </div>
+                        <hr>
+                        <h4>Social Media Links</h4>
+                        <div class="form-group">
+                            Facebook
+                            <input type="text" class="form-control" name="facebook" id="facebook" placeholder="" [class.is-invalid]="registerForm.get('facebook').invalid && registerForm.get('facebook').touched" formControlName="facebook" [(ngModel)]="userDetails.facebook">
+
+                        </div>
+                        <div class="form-group">
+                            Twitter
+                            <input type="text" class="form-control" name="twitter" id="twitter" placeholder="" [class.is-invalid]="registerForm.get('twitter').invalid && registerForm.get('twitter').touched" formControlName="twitter" [(ngModel)]="userDetails.twitter">
+
+                        </div>
+                        <div class="form-group">
+                            Instagram
+                            <input type="text" class="form-control" name="instagram" id="instagram" placeholder="" [class.is-invalid]="registerForm.get('instagram').invalid && registerForm.get('instagram').touched" formControlName="instagram" [(ngModel)]="userDetails.instagram">
+
+                        </div>
+                        <div class="form-group">
+                            linkedin
+                            <input type="text" class="form-control" name="linkedin" id="linkedin" placeholder="" [class.is-invalid]="registerForm.get('linkedin').invalid && registerForm.get('linkedin').touched" formControlName="linkedin" [(ngModel)]="userDetails.linkedin">
+
+                        </div>
+
+
+
+
+                        <div class="text-center"><button type="submit" [disabled]="registerForm.invalid">Submit</button></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>

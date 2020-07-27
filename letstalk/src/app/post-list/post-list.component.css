@@ -1,0 +1,20 @@
+.services {
+    margin-top: 150px;
+}
+
+.icon-box {
+    width: 100% !important;
+}
+
+.btn-default {
+    width: 150px !important;
+    height: 50px !important;
+    color: #fff !important;
+    background-color: black !important;
+    float: right;
+    margin-bottom: 50px !important;
+}
+
+.del_icon {
+    float: right;
+}

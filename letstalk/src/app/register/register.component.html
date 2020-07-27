@@ -1,0 +1,117 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-md-12 " data-aos="fade-up" data-aos-delay="100">
+                    <!-- <div class="contact-about">
+                        <h3>Vesperr</h3>
+                        <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                        <div class="social-links">
+                            <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+                        </div>
+                    </div> -->
+                    <img class="img-login" src="../../assets/img/reg.gif">
+                </div>
+
+                <div class="col-lg-5 col-md-12 login-block" data-aos="fade-up" data-aos-delay="300">
+                    <h2>Sign Up</h2>
+                    <hr>
+                    <form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="php-email-form">
+                        <div class="form-group">
+                            User type
+
+                            <select type="text" class="form-control" name="user_type" id="user_type" [class.is-invalid]="registerForm.get('user_type').invalid && registerForm.get('user_type').touched" formControlName="user_type" [(ngModel)]="registeredUser.user_type" required>
+                                <option value="">Select User Type</option>
+                                <option value="psychotherapist">Psychotherapist</option>
+                                <option value="client" selected>Client</option>
+                                
+                            </select>
+                            <div *ngIf="registerForm.get('user_type').invalid && registerForm.get('user_type').touched">
+                                <small *ngIf="registerForm.get('user_type').errors?.required" class="text-danger">User Type is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Name
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" [class.is-invalid]="registerForm.get('name').invalid && registerForm.get('name').touched" formControlName="name" [(ngModel)]="registeredUser.name" required/>
+                            <div *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched">
+                                <small *ngIf="registerForm.get('name').errors?.required" class="text-danger">Name is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Gender
+                            <select type="text" class="form-control" name="gender" id="gender" [class.is-invalid]="registerForm.get('gender').invalid && registerForm.get('gender').touched" formControlName="gender" [(ngModel)]="registeredUser.gender" required>
+                                <option value="">Select Your Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <div *ngIf="registerForm.get('gender').invalid && registerForm.get('gender').touched">
+                                <small *ngIf="registerForm.get('gender').errors?.required" class="text-danger">Gender is required</small>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            Date of Birth
+                            <input type="date" class="form-control" name="dob" id="dob" placeholder="Your Date of Birth" [class.is-invalid]="registerForm.get('dob').invalid && registerForm.get('dob').touched" formControlName="dob" [(ngModel)]="registeredUser.dob" required/>
+                            <div *ngIf="registerForm.get('dob').invalid && registerForm.get('dob').touched">
+                                <small *ngIf="registerForm.get('dob').errors?.required" class="text-danger">Date of Birth is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Username (It will appers on your post)
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Your Username" [class.is-invalid]="registerForm.get('username').invalid && registerForm.get('username').touched" formControlName="username" [(ngModel)]="registeredUser.username"
+                                required/>
+                            <div *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">
+                                <small *ngIf="registerForm.get('username').errors?.required" class="text-danger">Username is required</small>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            Email
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" [class.is-invalid]="registerForm.get('email').invalid && registerForm.get('email').touched" formControlName="email" [(ngModel)]="registeredUser.email" required/>
+                            <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+                                <small *ngIf="registerForm.get('email').errors?.required" class="text-danger">Email is required</small>
+                                <small *ngIf="registerForm.get('email').errors?.pattern" class="text-danger">Invalid Email Format</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Password
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Your Password" [class.is-invalid]="registerForm.get('password').invalid && registerForm.get('password').touched" formControlName="password" [(ngModel)]="registeredUser.password"
+                                required/>
+                            <div *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">
+                                <small *ngIf="registerForm.get('password').errors?.required" class="text-danger">Password is required</small>
+                                <small *ngIf="registerForm.get('password').errors?.minlength" class="text-danger">Minimum 6 characters</small>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
+                            Confirm Password
+                            <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" [class.is-invalid]="registerForm.get('confirm_password').invalid && registerForm.get('confirm_password').touched" formControlName="confirm_password"
+                                [(ngModel)]="registeredUser.confirm_password" required/>
+                            <div *ngIf="registerForm.get('confirm_password').invalid && registerForm.get('confirm_password').touched">
+                                <small *ngIf="registerForm.get('confirm_password').errors?.required" class="text-danger">Password is required</small>
+                                <small *ngIf="registerForm.get('confirm_password').errors?.minlength" class="text-danger">Minimum 6 characters</small>
+                                <small *ngIf="registerForm.get('confirm_password').hasError('passwordMismatch') && registerForm.get('confirm_password').touched" class="text-danger">password does not match</small>
+                            </div>
+                        </div> -->
+
+
+                        <div class="text-center"><button type="submit" [disabled]="registerForm.invalid">Submit</button></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>

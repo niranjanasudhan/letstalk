@@ -1,0 +1,48 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <!-- ======= Team Section ======= -->
+            <section id="team" class="team section-bg">
+                <div class="container">
+
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Meet Our Therapists</h2>
+                        <p>Our therapists provide a supportive and creative space to explore the work of psychotherapy. We work with individuals, couples, families, and adolescents. Start the healing process and get more information by choosing one of our
+                            therapists below...</p>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" *ngFor="let user of users">
+                            <div class="member" data-aos="fade-up" data-aos-delay="100">
+                                <div class="member-img">
+                                    <img *ngIf="!user.image" src="./assets/img/psy.jpg" class="img-fluid" alt="">
+                                    <img *ngIf="user.image" [src]="user.image" class="img-fluid" alt="">
+                                    <!-- <div class="social">
+                                        <a href=""><i class="icofont-twitter"></i></a>
+                                        <a href=""><i class="icofont-facebook"></i></a>
+                                        <a href=""><i class="icofont-instagram"></i></a>
+                                        <a href=""><i class="icofont-linkedin"></i></a>
+                                    </div> -->
+                                </div>
+                                <div class="member-info">
+                                    <a [routerLink]="['/therapist_details',user._id ]">
+                                        <h4>{{ user.name }}</h4>
+                                    </a>
+                                    <span>Chief Executive Officer</span>
+                                </div>
+                                <a [routerLink]="['/message/',user?._id ]"><button class="btn-message">Message</button></a>
+                                <a [routerLink]="['/book/',user?._id ]"><button class="btn-book">Book</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Team Section -->
+        </div>
+    </section>
+</main>

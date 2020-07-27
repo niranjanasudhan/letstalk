@@ -1,0 +1,38 @@
+.login {
+    margin-top: 100px !important;
+    padding: 50px;
+}
+
+.img-login {
+    width: 90%;
+}
+
+.login-block {
+    margin-top: 100px;
+}
+
+.login-block button {
+    float: right !important;
+    width: 180px !important;
+}
+
+.btn-message {
+    border: 1px solid #afd275 !important;
+    color: #afd275 !important;
+    background-color: #fff;
+    margin-right: 5px;
+    border-radius: 40 !important;
+    float: left !important;
+    padding: 5px;
+    margin: 10px;
+}
+
+.btn-book {
+    border: 1px solid #afd275 !important;
+    color: #afd275 !important;
+    background-color: #fff;
+    border-radius: 40 !important;
+    float: right !important;
+    padding: 5px;
+    margin: 10px;
+}

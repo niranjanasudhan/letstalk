@@ -1,0 +1,40 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <div class="row">
+
+
+                <div class="col-lg-12 col-md-12 login-block" data-aos="fade-up" data-aos-delay="300">
+                    <h2>Add New Post</h2>
+                    <hr>
+                    <form [formGroup]="postForm" (ngSubmit)="post()" class="php-email-form">
+
+                        <input type="hidden" formControlName="user_id" [(ngModel)]="postData.user_id">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Provide Title" [class.is-invalid]="postForm.get('title').invalid && postForm.get('title').touched" formControlName="title" [(ngModel)]="postData.title" required />
+                            <div *ngIf="postForm.get('title').invalid && postForm.get('title').touched">
+                                <small *ngIf="postForm.get('title').errors?.required" class="text-danger">Title is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="desc" id="desc" placeholder="Write Something" [class.is-invalid]="postForm.get('desc').invalid && postForm.get('desc').touched" formControlName="desc" [(ngModel)]="postData.desc" required>
+                                </textarea>
+                            <div *ngIf="postForm.get('desc').invalid && postForm.get('desc').touched">
+                                <small *ngIf="postForm.get('desc').errors?.desc" class="text-danger">This field is required</small>
+
+                            </div>
+                        </div>
+
+
+                        <div class="text-center"><button type="submit" [disabled]="postForm.invalid">Add Post</button></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>

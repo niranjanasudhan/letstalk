@@ -1,0 +1,75 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <div class="row">
+
+
+                <div class="col-lg-5 col-md-12 login-block" data-aos="fade-up" data-aos-delay="300">
+                    <h2>Edit Profile</h2>
+                    <hr>
+                    <form [formGroup]="registerForm" (ngSubmit)="editUser()" class="php-email-form">
+
+                        <div class="form-group">
+                            Name
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" [class.is-invalid]="registerForm.get('name').invalid && registerForm.get('name').touched" formControlName="name" [(ngModel)]="userDetails.name" required/>
+                            <div *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched">
+                                <small *ngIf="registerForm.get('name').errors?.required" class="text-danger">Name is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Gender
+                            <select type="text" class="form-control" name="gender" id="gender" [class.is-invalid]="registerForm.get('gender').invalid && registerForm.get('gender').touched" formControlName="gender" [(ngModel)]="userDetails.gender" required>
+                                <option value="">Select Your Gender</option>
+                                <option value="Male" [selected]="'Male' === [userDetails.gender]">Male</option>
+                                <option value="Female" [selected]="'Female' === [userDetails.gender]">Female</option>
+                            </select>
+                            <div *ngIf="registerForm.get('gender').invalid && registerForm.get('gender').touched">
+                                <small *ngIf="registerForm.get('gender').errors?.required" class="text-danger">Gender is required</small>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            Date of Birth
+                            <input type="date" class="form-control" name="dob" id="dob" placeholder="Your Date of Birth" [class.is-invalid]="registerForm.get('dob').invalid && registerForm.get('dob').touched" formControlName="dob" [(ngModel)]="userDetails.dob" required/>
+                            <div *ngIf="registerForm.get('dob').invalid && registerForm.get('dob').touched">
+                                <small *ngIf="registerForm.get('dob').errors?.required" class="text-danger">Date of Birth is required</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            Username (It will appers on your post)
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Your Username" [class.is-invalid]="registerForm.get('username').invalid && registerForm.get('username').touched" formControlName="username" [(ngModel)]="userDetails.username"
+                                required/>
+                            <div *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">
+                                <small *ngIf="registerForm.get('username').errors?.required" class="text-danger">Username is required</small>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            Email
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" [class.is-invalid]="registerForm.get('email').invalid && registerForm.get('email').touched" formControlName="email" [(ngModel)]="userDetails.email" required disabled/>
+                            <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+                                <small *ngIf="registerForm.get('email').errors?.required" class="text-danger">Email is required</small>
+                                <small *ngIf="registerForm.get('email').errors?.pattern" class="text-danger">Invalid Email Format</small>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="text-center"><button type="submit" [disabled]="registerForm.invalid">Submit</button></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>

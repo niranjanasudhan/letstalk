@@ -1,0 +1,84 @@
+<main id="main">
+    <section id="contact" class="contact login">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+
+            </div>
+            <div class="row">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    <span>Messages</span>
+                                </div>
+                                <div class="card-body chat-care">
+                                    <ul class="chat" *ngFor="let messages of message">
+
+
+                                        <li class="agent clearfix" *ngIf="messages.sent_by=='P'">
+                                            <span class="chat-img left clearfix mx-2">
+                                  <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="Agent" class="img-circle" />
+                              </span>
+                                            <div class="chat-body clearfix">
+                                                <div class="header clearfix">
+                                                    <small class="left text-muted"><span class="glyphicon glyphicon-time"></span>{{messages?.date}}</small>
+                                                    <strong class="primary-font"></strong>
+                                                </div>
+                                                <p>
+                                                    {{messages?.message}}
+                                                </p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="admin clearfix" *ngIf="messages.sent_by=='C'">
+                                            <span class="chat-img right clearfix  mx-2">
+                                  <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="Admin" class="img-circle" />
+                              </span>
+                                            <div class="chat-body clearfix">
+                                                <div class="header clearfix">
+                                                    <small class="left text-muted"><span class="glyphicon glyphicon-time"></span>{{messages?.date}}</small>
+                                                    <strong class="right primary-font"></strong>
+                                                </div>
+                                                <p>
+                                                    {{messages?.message}}
+                                                </p>
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <form [formGroup]="messageForm" (ngSubmit)="messageUserAdd()">
+                                        <input type="hidden" name="user_id" formControlName="user_id" [(ngModel)]="messageUser.user_id" />
+                                        <input type="hidden" name="therapist_id" formControlName="therapist_id" [(ngModel)]="messageUser.therapist_id" />
+                                        <input type="hidden" name="date" formControlName="date" [(ngModel)]="messageUser.date" />
+                                        <input type="hidden" name="sent_by" formControlName="sent_by" [(ngModel)]="messageUser.sent_by" />
+
+                                        <div class="input-group">
+                                            <input id="btn-input" type="text" name="message" [class.is-invalid]="messageForm.get('message').invalid && messageForm.get('message').touched" formControlName="message" [(ngModel)]="messageUser.message" class="form-control input-sm" placeholder="Type your message here..."
+                                                required/>
+                                            <div *ngIf="messageForm.get('message').invalid && messageForm.get('message').touched">
+                                                <small *ngIf="messageForm.get('message').errors?.required" class="text-danger">Message is required</small>
+
+                                            </div>
+                                            <span class="input-group-btn">
+                              <button class="btn btn-primary" id="btn-chat">
+                                  Send</button>
+                          </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
