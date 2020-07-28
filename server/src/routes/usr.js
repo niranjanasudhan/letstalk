@@ -36,7 +36,7 @@ var upload = multer({
 // User model
 let User = require('../model/user');
 
-
+var avatar;
 // POST User
 router.post('/create-user', upload.single('avatar'), (req, res, next) => {
     const url = req.protocol + '://' + req.get('host')
@@ -45,6 +45,7 @@ router.post('/create-user', upload.single('avatar'), (req, res, next) => {
         name: req.body.name,
         avatar: url + '/public/' + req.file.filename
     });
+    avatar = url + '/public/' + req.file.filename
     User.updateOne({ _id: req.body.name }, { $set: { 'image': avatar } }, (err, result) => {
         if (err) {
             return console.log(err);

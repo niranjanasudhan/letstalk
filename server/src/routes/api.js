@@ -88,6 +88,19 @@ router.get('/therapist_users', function(req, res) {
             res.send(users);
         });
 });
+router.get('/therapist_users_image', function(req, res) {
+
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods:GET, POST, PATCH, PUT, DELETE, OPTION');
+    var id = req.query._id;
+
+    User.findOne({ _id: id })
+        .then(function(users) {
+            res.send(users);
+        });
+});
+
+
 router.get('/getUsersInbox', function(req, res) {
     var type = req.query.type;
     var ext;

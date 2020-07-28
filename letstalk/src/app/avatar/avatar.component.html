@@ -2,7 +2,8 @@
     <div class="row">
 
         <form [formGroup]="form" (ngSubmit)="submitForm()">
-
+            <h4>Change Your Profile Photo</h4>
+            <hr>
             <!-- Progress Bar -->
             <div class="progress form-group">
                 <div class="progress-bar progress-bar-striped bg-success" role="progressbar">
@@ -14,7 +15,11 @@
                 <div class="preview" *ngIf="preview && preview !== null">
                     <img [src]="preview" [alt]="form.value.name" style="height:250px;width:250px;">
                 </div>
+                <div class="preview" *ngIf="users.image && users.image !== null && preview == null">
+                    <img [src]="users?.image" style="height:250px;width:250px;">
+                </div>
             </div>
+
 
             <!-- File Input -->
             <div class="form-group">

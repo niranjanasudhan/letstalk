@@ -111,4 +111,10 @@ private _loginUrl="http://localhost:3000/api/login";
     params = params.append('_id', item);
  return this.http.get('http://localhost:3000/api/getBookUser', {params: params});
   }
+  getTherapistUsersImage(item)
+  {
+    let params = new HttpParams();
+    params = params.append('_id', item);
+    return this.http.get('http://localhost:3000/api/therapist_users_image', {params: params});
+  }
 }

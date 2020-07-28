@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 import { FileUploadService } from "../shared/file-upload.service";
 import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-avatar',
@@ -14,13 +15,14 @@ export class AvatarComponent implements OnInit {
   preview: string;
   form: FormGroup;
   percentDone: any = 0;
-  users = [];
+  users = {image:''};
   id:String;
 
   constructor(
     public fb: FormBuilder,
     public router: Router,
-    public fileUploadService: FileUploadService
+    public fileUploadService: FileUploadService,
+    private authService:AuthService,
   ) {
     // Reactive Form
     this.form = this.fb.group({
@@ -31,6 +33,9 @@ export class AvatarComponent implements OnInit {
 
   ngOnInit() {
     this.id=localStorage.getItem('user_id');
+    this.authService.getTherapistUsersImage(this.id).subscribe((data)=>{
+      this.users=JSON.parse(JSON.stringify(data));
+    })
    }
 
   // Image Preview
