@@ -18,3 +18,7 @@
 .del_icon {
     float: right;
 }
+
+.services {
+    min-height: 550px;
+}

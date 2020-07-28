@@ -108,3 +108,7 @@
     height: 300px !important;
     overflow: hidden;
 }
+
+.services {
+    min-height: 550px;
+}

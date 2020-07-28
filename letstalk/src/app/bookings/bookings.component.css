@@ -28,3 +28,7 @@ th {
 td {
     padding: 10px;
 }
+
+.contact {
+    min-height: 550px;
+}

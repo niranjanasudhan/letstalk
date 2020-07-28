@@ -44,6 +44,14 @@
     background-image: url(../../assets/img/4.png);
 }
 
+.addition {
+    background-image: url(../../assets/img/addition.png);
+}
+
+.self {
+    background-image: url(../../assets/img/selfc.png);
+}
+
 .cc-selector input:active+.drinkcard-cc {
     opacity: .5;
 }

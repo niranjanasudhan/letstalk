@@ -15,3 +15,7 @@
     float: right !important;
     width: 180px !important;
 }
+
+.contact {
+    min-height: 550px;
+}
